@@ -19,9 +19,9 @@ The steps to run the app are:
 ##Configuration
 * Clone the repository
 * Create on the root folder a .config with 2 files secretAppSettings.config and secretConnectionStrings.config
-
-secretAppSettings.config
 * Replace with your keys
+* 
+secretAppSettings.config
 <pre>
 &lt;?xml version="1.0" encoding="utf-8"?&gt;
 &lt;appSettings&gt;
