@@ -22,28 +22,30 @@ The steps to run the app are:
 
 secretAppSettings.config
 * Replace with your keys
-<?xml version="1.0" encoding="utf-8"?>
-<appSettings>
-  <add key="Microsoft.ServiceBus.ConnectionString" value="Endpoint=sb://[ENDPOINT];SharedAccessKeyName=[KeyName];SharedAccessKey=[Key]"/>
-  <add key="DocumentDBUrl" value="" />
-  <add key="DocumentDBPrimaryKey" value="" />
-  <add key="Cognitive:VisionAPIKey" value="" />
-  <add key="Cognitive:EmotionAPIKey" value="" />
-  <add key="Cognitive:FaceAPIKey" value="" />
-  <add key="Bing:TranslatorClientID" value="" />
-  <add key="Bing:TranslatorClientSecret" value="" />
-  <add key="Twitter:ConsumerKey" value="" />
-  <add key="Twitter:ConsumerSecret" value="" />
-  <add key="Twitter:AccessToken" value="" />
-  <add key="Twitter:AccessTokenSecret" value="" />
-</appSettings>
-
+<pre>
+&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;appSettings&gt;
+  &lt;add key="Microsoft.ServiceBus.ConnectionString" value="Endpoint=sb://[ENDPOINT];SharedAccessKeyName=[KeyName];SharedAccessKey=[Key]"/&gt;
+  &lt;add key="DocumentDBUrl" value="" /&gt;
+  &lt;add key="DocumentDBPrimaryKey" value="" /&gt;
+  &lt;add key="Cognitive:VisionAPIKey" value="" /&gt;
+  &lt;add key="Cognitive:EmotionAPIKey" value="" /&gt;
+  &lt;add key="Cognitive:FaceAPIKey" value="" /&gt;
+  &lt;add key="Bing:TranslatorClientID" value="" /&gt;
+  &lt;add key="Bing:TranslatorClientSecret" value="" /&gt;
+  &lt;add key="Twitter:ConsumerKey" value="" /&gt;
+  &lt;add key="Twitter:ConsumerSecret" value="" /&gt;
+  &lt;add key="Twitter:AccessToken" value="" /&gt;
+  &lt;add key="Twitter:AccessTokenSecret" value="" /&gt;
+&lt;/appSettings&gt;
+</pre>
 secretConnectionStrings.config
-<?xml version="1.0" encoding="utf-8"?>
-<connectionStrings>
-  <add name="AzureWebJobsDashboard" connectionString="DefaultEndpointsProtocol=https;AccountName=[Account];AccountKey=[Key]" />
-  <add name="AzureWebJobsStorage" connectionString="DefaultEndpointsProtocol=https;AccountName=[Account]AccountKey=[Key]" />
-  <add name="AzureWebJobsServiceBus" connectionString="Endpoint=sb://[ENDPOINT];SharedAccessKeyName=[KeyName];SharedAccessKey=[Key]" />
-</connectionStrings>
-
+<pre>
+&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;connectionStrings&gt;
+  &lt;add name="AzureWebJobsDashboard" connectionString="DefaultEndpointsProtocol=https;AccountName=[Account];AccountKey=[Key]" /&gt;
+  &lt;add name="AzureWebJobsStorage" connectionString="DefaultEndpointsProtocol=https;AccountName=[Account]AccountKey=[Key]" /&gt;
+  &lt;add name="AzureWebJobsServiceBus" connectionString="Endpoint=sb://[ENDPOINT];SharedAccessKeyName=[KeyName];SharedAccessKey=[Key]" /&gt;
+&lt;/connectionStrings&gt;
+</pre>
 Enjoy !
