@@ -3,3 +3,22 @@
 ################################################################################
 
 /packages
+/.vs
+/secretAppSettings.config
+/secretConnectionStrings.config
+/SociOLRoom.Analytics/bin
+/SociOLRoom.Analytics/obj/Debug
+/SociOLRoom.Analytics/Properties/PublishProfiles
+/SociOLRoom.Analytics/ApplicationInsights.config
+/SociOLRoom.Analytics/secretAppSettings.config
+/SociOLRoom.Analytics/secretConnectionStrings.config
+/SociOLRoom.Analytics/SociOLRoom.Analytics.csproj.user
+/SociOLRoom.Analytics.Core/bin
+/SociOLRoom.Analytics.Core/obj
+/SociOLRoom.Analytics.Functions
+/SociOLRoom.Analytics.InstagramListener/bin
+/SociOLRoom.Analytics.InstagramListener/obj
+/SociOLRoom.Analytics.ProcessImages/bin
+/SociOLRoom.Analytics.ProcessImages/obj
+/TwitterListener/bin
+/TwitterListener/obj

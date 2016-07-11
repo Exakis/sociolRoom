@@ -1,0 +1,14 @@
+﻿{
+  "$schema": "http://schemastore.org/schemas/json/webjobs-list.json",
+  "WebJobs": [
+    {
+      "filePath": "../TwitterListener/SociOLRoom.Analytics.TwitterListener.csproj"
+    },
+    {
+      "filePath": "../SociOLRoom.Analytics.ProcessImages/SociOLRoom.Analytics.ProcessImages.csproj"
+    },
+    {
+      "filePath": "../SociOLRoom.Analytics.InstagramListener/SociOLRoom.Analytics.InstagramListener.csproj"
+    }
+  ]
+}

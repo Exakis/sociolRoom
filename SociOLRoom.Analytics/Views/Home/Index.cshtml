@@ -1,0 +1,323 @@
+﻿@using SociOLRoom.Analytics.Properties
+
+<body class="homepage index-home index">
+
+    <div data-bind="visible: !isLoaded()">
+        <img src="/img/loading.png" style="display: block; margin: auto" />
+    </div>
+
+    <div id="container" class="container intro-effect-grid" data-bind="visible: isLoaded" style="display: none">
+      
+        <article class="content" >
+            <div class="">
+                <div class="grid">
+                    <!-- ko foreach: items -->
+                    <figure data-bind="css: size">
+                        <img data-bind="attr: { src: imageUrl }">
+                        <figcaption>
+                            <div class="figcaption-border">
+                                <h2 data-bind="text: analysisResult.description.captions[0].text"></h2>
+                                <p data-bind="text: tags"> </p>
+                                <a data-bind="click: function() { $parent.showModal($data); }">View more</a>
+                                <div class="figure-overlay"></div>
+                                <i data-bind="css: picto" style="position:absolute;bottom:11px;right:15px;"></i>
+                            </div>
+                        </figcaption>
+                    </figure>
+                    <!-- /ko -->
+                </div>
+            </div>
+        </article>
+    </div><!-- /container -->
+  
+    <div id="st-container" class="st-container st-effect-1 st-menu-open" data-bind="visible: isLoaded" style="display: none; ">
+        <div class="st-menu st-effect-1" style="overflow: hidden">
+            <div class="fullwidth site-infos">
+                <div class="logo">
+                    <a href="/">
+                        <img src="/img/logo.png" alt="">
+                    </a>
+                </div>
+                <h3 class="section-title">Analytics</h3>
+                <span class="section-description">developped by Exakis, provided by Microsoft Cognitive Services</span>
+            </div>
+            <div class="fullwidth bottom-links" data-bind="with: stats">
+                <p>@Resources.From <i data-bind="date: from, dateFormat: 'DD/MM/YYYY'"></i></p>
+            </div>
+            <nav class="fullwidth sidebar-navigation-menu" data-bind="with: stats">
+                <ul>
+                    <li>
+                        <a href="/report">
+                            <i class="fa fa-area-chart"></i> @Resources.Report PowerBI
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/report">
+                            <i class="fa fa-female"></i> <!-- ko text: women --> <!-- /ko --> @Resources.Women
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/report">
+                            <i class="fa fa-male"></i> <!-- ko text: men --> <!-- /ko --> @Resources.Men
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/report">
+                            <i class="fa fa-child"></i> <!-- ko text: children --> <!-- /ko --> @Resources.Children
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/report">
+                            <i class="fa fa-birthday-cake"></i> <!-- ko text: age --> <!-- /ko --> @Resources.AverageYear
+
+                        </a>
+                    </li>
+                    <li><a href="/report"><i class="fa fa-smile-o"></i> <!-- ko text: emotion.name --> <!-- /ko --> (<!-- ko text: emotion.percent --> <!-- /ko -->%)</a></li>
+                    <li><a href="/report"><i class="fa fa-code"></i> <!-- ko text: category.name --> <!-- /ko --> (<!-- ko text: category.percent --> <!-- /ko -->%)</a></li>
+                </ul>
+                <img src="/img/azure.png" style="margin: auto; display: block; margin-top: 10px" />
+                <img src="/img/ml.png" style="margin: auto; display: block; margin-top: 10px" />
+                <img src="/img/mp.png" style="margin: auto; display: block; margin-top: 10px" />
+            </nav>
+          
+            <div>
+
+            </div>
+            <div class="fullwidth bottom-links">
+                <p>@DateTime.Today.Year © Exakis</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="animatedModal" data-bind="visible: modalVisibility" style="position: fixed; width: 100%; height: 100%; top: 0px; left: 0px; overflow-y: auto; z-index: 999999999; animation-duration: 0.6s; background-color: rgba(39, 38, 43, 0.9);">
+        <!--THIS IS IMPORTANT! to close the modal, the class name has to match the name given on the ID  class="close-animatedModal" -->
+        <div class="close-animatedModal" style="height: 75px; background: rgba(39, 38, 43, 0.8); margin-top: -10px;">
+            <a class="cd-primary-nav-trigger is-clicked" style="top: 10px; left: 10px" data-bind="click: closeModal" id="trigger-menu">
+                <span class="cd-menu-icon"></span>
+            </a>
+            <h2 style="color:white;margin-left:80px;margin-top:10px; text-transform: uppercase;" data-bind="with: detail">
+                <!-- ko text: analysisResult.description.captions[0].text -->
+                <!-- /ko -->
+            </h2>
+        </div>
+
+        <div class="modal-content" data-bind="with: detail">
+            <div class="visionfaces">
+                <img id="imgDetail" data-bind="attr: { src: imageUrl }" style="display: block; margin: auto; border: 1px solid rgba(255, 255, 255, 0.1); max-height: 600px" />
+            </div>
+            <div style="margin-top: 25px">
+                <div class="tagBox tagBoxFirst tagBoxBig">Tags:</div>
+                <!-- ko foreach: analysisResult.tags -->
+                <div class="tagBox italic" data-bind="text: name"></div>
+                <!-- /ko -->
+                <div style="clear: both"></div>
+                <div class="tagBox tagBoxFirst tagBoxBig">Categories:</div>
+                <!-- ko foreach: analysisResult.categories -->
+                <div class="tagBox italic tagBoxBig" data-bind="text: name"></div>
+                <!-- /ko -->
+            </div>
+        </div>
+    </div>
+
+
+    <script src="/js/modernizr.custom.js"></script>
+    <script src="/js/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="/js/classie.js"></script>
+    <script src="/js/custom.js"></script>
+
+    <script src="/js/jquery.ketchup.all.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.13.0/moment-with-locales.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.0/knockout-debug.js"></script>
+    <script src="https://rawgit.com/adrotec/knockout-date-bindings/master/knockout-date-bindings.js"></script>
+    <script src="~/js/animatedModal.min.js"></script>
+    <!--[if IE]>
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <script>
+
+        var add_rect = function (rect, age, gender, emotion, hasglasses, index, parent) {
+            var id = 'rect' + Math.round(Math.random() * 10000);
+            var tooltip = null;
+            if (age != null) {
+                tooltip = '@Resources.Age:&nbsp&nbsp' + age;
+            }
+            if (tooltip != null && gender != null && gender !== "Unknown") {
+                tooltip += '<br/>';
+            }
+            if (gender != null && gender !== "Unknown") {
+                tooltip += '@Resources.Gender:&nbsp&nbsp' + gender;
+            }
+            if (hasglasses) {
+                tooltip += '&nbsp @Resources.WithGalsses';
+            }
+            if (tooltip != null && emotion != null && emotion !== "Unknown") {
+                tooltip += '<br/>';
+            }
+            if (emotion != null && emotion !== "Unknown") {
+                tooltip += '@Resources.Emotion:&nbsp&nbsp' + emotion;
+            }
+
+
+            var div = '<div data-html="true" class="child" title="' + tooltip + '" id="' + id + '"/>';
+            $(div)
+                .appendTo(parent)
+                .css("left", rect.left + "px")
+                .css("top", rect.top + "px")
+                .css("width", (rect.width) + "px")
+                .css("height", (rect.height) + "px")
+                .css("border", "2px solid " + "black")
+                .css("position", "absolute");
+
+            if (tooltip != null) {
+                var placement = index % 2 === 0 ? 'bottom' : 'top';
+                $('#' + id).tooltip({
+                    trigger: 'manual',
+                    'show': true,
+                    'placement': 'top',
+                    'title': tooltip,
+                    'template': '<div class="visiontooltip" role="tooltip"><div class="tooltip-arrow"></div><div class="tooltip-inner"></div></div>'
+                });
+
+                $('#' + id).tooltip('show');
+            }
+
+        };
+
+        function GetEmotion(score) {
+            var value = { val: score.anger, txt: "@Resources.Anger" };
+
+            if (score.contempt > value.val)
+                value = { val: score.contempt, txt: "@Resources.Contempt" };
+            if (score.disgust > value.val)
+                value = { val: score.disgust, txt: "@Resources.Disgust" };
+            if (score.fear > value.val)
+                value = { val: score.fear, txt: "@Resources.Fear" };
+            if (score.happiness > value.val)
+                value = { val: score.happiness, txt: "@Resources.Happiness" };
+            if (score.neutral > value.val)
+                value = { val: score.neutral, txt: "@Resources.Neutral" };
+            if (score.sadness > value.val)
+                value = { val: score.sadness, txt: "@Resources.Sadness" };
+            if (score.surprise > value.val)
+                value = { val: score.surprise, txt: "@Resources.Surprise" };
+
+            return value.txt;
+
+        }
+
+        function drawFaceRects(visionsdk, faceResult, emotionResult, isAdjust) {
+
+            var image = $('#imgDetail')[0];
+
+            if (!image) {
+                return;
+            }
+
+            var left = 0;
+            var top = 0;
+            // get the image left and top
+            if (isAdjust) {
+                left = $(image).css('left') == 'auto' ? parseFloat($(image).css('margin-left').replace("px", "")) : parseFloat($(image).css('left'));
+                top = $(image).css('top') == 'auto' ? 75 : parseFloat($(image).css('top'));
+            }
+
+            if (visionsdk != null && visionsdk.faces != null) {
+                var faces = visionsdk.faces;
+
+                var heightRatio = image.height / visionsdk.metadata.height;
+                var widthRatio = image.width / visionsdk.metadata.width;
+
+                $.each(faces, function (index, element) {
+                    var rectangle = element.faceRectangle;
+                    var age = faceResult[index].faceAttributes.age;//element.age;
+                    var gender = faceResult[index].faceAttributes.gender === "male" ? "@Resources.Man" : "@Resources.Woman";
+                    var emotion = GetEmotion(emotionResult[index].scores);
+                    var hasGlasses = faceResult[index].faceAttributes.glasses === "NoGlasses" ? false : true;
+                    var rect = {};
+                    rect.top = Math.round(heightRatio * rectangle.top) + top;
+                    rect.height = Math.round(heightRatio * rectangle.height);
+                    rect.left = Math.round(widthRatio * rectangle.left) + left;
+                    rect.width = Math.round(widthRatio * rectangle.width);
+                    var $container = $('.visionfaces')[0];
+
+                    add_rect(rect, age, gender, emotion, hasGlasses, index, $container);
+
+                });
+
+
+            }
+
+
+        }
+
+
+        var ViewModel = function () {
+            var self = this;
+            self.items = ko.observableArray([]);
+            self.modalVisibility = ko.observable(false);
+
+            self.detail = ko.observable();
+            self.stats = ko.observable();
+            self.isLoaded = ko.observable(false);
+
+
+            var sizes = ["big", "small", "small", "small", "small", "big", "big", "small", "small", "small", "small", "big", "big", "small", "small", "small", "small", "big", "small", "small", "small", "small", "big", "big", "small", "small", "small", "small", "big", "big", "small", "small", "small", "small"];
+
+            var loadData = function() {
+                $.get("/api/Data/Wall", function(data) {
+                    var idx = 0;
+                    var idx2 = 0;
+                    $.map(data, function(val, i) {
+                        val.picto = "fa fa-twitter";
+                        if (val.socialNetwork === 0) {
+                            val.imageUrl = "/home/picture?url=" + val.imageUrl;
+                            val.picto = "fa fa-instagram";
+                        }
+
+                        idx2++;
+                        
+                        val.size = sizes[idx++] + ' single-item-effect';
+                        if (idx2 > sizes.length) {
+                            idx2 = 0;
+                            idx = 0;
+                        }
+
+                    });
+                    self.items(data);
+                    self.isLoaded(true);
+
+                    $.get("/api/Data/statistics", function(data) {
+                        self.stats(data);
+                    });
+
+                });
+            };
+
+            // toutes les 1 min
+            setInterval(loadData, 60000);
+
+            loadData();
+
+
+            self.showModal = function (data) {
+                self.modalVisibility(true);
+
+                self.detail(data);
+
+                drawFaceRects(data.analysisResult, data.faceResult, data.emotionResult, true);
+            };
+
+            self.closeModal = function () {
+                self.modalVisibility(false);
+            };
+
+
+        };
+
+        ko.applyBindings(new ViewModel());
+
+    </script>
+    <a href="#" class="back-to-top">Top</a>
+
+</body>

@@ -1,0 +1,646 @@
+
+/*--- 1. Responsive Max_319px ---*/
+@media only screen and (max-width: 319px) {
+    .travelogue-search-open .travelogue-search-input {
+        width: 52%;
+    }
+    .top{
+    	left: 38%;
+    }
+    .index-contact .one_half {
+        padding: 0;
+        width: 100%;
+    }
+    .index-home .grid figure p,
+    .index-category .grid figure p {
+    	font-size: 100%;
+    }
+    .index-home .grid figure figcaption, 
+    .index-category .grid figure figcaption {
+        font-size: 24px;
+    }
+    .grid li {
+        width: 100%;
+    }
+    #main #widgets div.section {
+        width: 240px;
+    }
+    /* Add new rules for this interval below */
+    .st-menu {
+        display: none;
+    }
+    .content {
+        margin-right: 0px !important;
+    }
+}
+
+
+/*--- 1. Responsive Min_320px Max_479px ---*/
+@media only screen and (min-width: 320px) and (max-width: 479px) {
+    .travelogue-search-open .travelogue-search-input {
+        width: 53%;
+    }
+    .index-contact .one_half {
+        padding: 0;
+        width: 100%;
+    }
+    .index-home .grid figure p,
+    .index-category .grid figure p {
+    	font-size: 100%;
+    }
+    .index-home .grid figure figcaption, 
+    .index-category .grid figure figcaption {
+        font-size: 24px;
+    }
+    #container .content p img {
+        float: none;
+        margin: 0;
+        max-width: 100%;
+    }
+    .button-v2, .button-v1 {
+        clear: both;
+        display: block;
+        margin-bottom: 8px;
+        margin-right: 0;
+        width: 100%;
+    }
+    /* Add new rules for this interval below */
+    .st-menu {
+        display: none;
+    } 
+    .content {
+        margin-right: 0px !important;
+    }
+}
+
+
+/*--- 3. Responsive Max_479px ---*/
+@media only screen and (max-width: 479px) {
+/*    .homepage .intro-effect-jam3.modify .title, .homepage .intro-effect-jam3 .title{
+        width:100%;
+        text-align:center; 
+    }*/
+    .questions .focus-me{
+        font-size: 24px;
+        padding: 20px;
+    }
+    .travelogue_comment_form > h2 {
+        font-size: 20px;
+        line-height: 30px;
+    }
+    .index-contact .questions li > span label,
+    .questions li > span label {
+        font-size: 16px;
+    }
+    .travelogue_comment_form .one_half:first-child{
+        margin-bottom: 10px;
+    }
+    .index-home .grid figure.small, .index-category .grid figure.small {
+        width: 100% !important;
+    }
+    .grid li {
+        width: 50%;
+    }
+    .travelogue_comment_form .one_half:first-child input,
+    .one_third,
+    .one_sixth,
+    .sixth_one,
+    .two_third,
+    .one_half,
+    .one_ninth,
+    .two_eight,
+    .ninth_one,
+    .eight_two{
+        width: 100%;
+    }
+    .intro-effect-grid .grid li h2 {
+        display: none;
+    }
+    .intro-effect-push .header .title {
+        top: 60px;
+        -webkit-transform: translateX(-50%);
+        -o-transform: translateX(-50%);
+        -moz-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        transform: translateX(-50%);
+    }
+    .index-single .intro-effect-push .header .title {
+        top: 40%;
+    }
+    .title, .content {
+        font-size: 50%;
+    }
+    button.trigger::before {
+        display: none;
+    }
+    /* Add new rules for this interval below */
+
+}
+
+
+/*--- 4. Responsive Min_480px Max_767px ---*/
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+    .travelogue-search-open .travelogue-search-input {
+        width: 45%;
+    }
+    .index-contact .one_half {
+        padding: 0;
+        width: 100%;
+    }
+    .index-home .grid figure p,
+    .index-category .grid figure p {
+    	font-size: 100%;
+    }
+    .index-home .grid figure figcaption, 
+    .index-category .grid figure figcaption {
+        font-size: 24px;
+    }
+    /* Add new rules for this interval below */
+
+}
+
+
+/*--- 5. Responsive Max_767px ---*/
+@media only screen and (max-width: 767px) {
+    .travelogue_comments .comment_author, .travelogue_comments .comment_body {
+        float: none;
+        width: 100%;
+    }
+/*    .intro-effect-sidefixed .title{
+        top: 30% !important;
+    }*/
+    button.trigger {
+        left: 48%;
+    }
+    .travelogue_comments .single_comment {
+        margin: 20px 0 0;
+    }
+    .travelogue_comments .child_comment .comment_body,
+    .travelogue_comments .sixth_one.comment_body,
+    .travelogue_comments .child_child_comment .comment_body {
+        width: 100%;
+    }
+    .travelogue_comments .author_name {
+        line-height: 38px;
+        text-align: left;
+    }
+    .index-tags-page .intro-effect-grid.modify .title,
+    .index-category .intro-effect-sidefixed.modify .title {
+        display: none;
+    }
+    .index-category .intro-effect-sidefixed article.content {
+        margin-left: 5%;
+        width: 100%;
+    }
+    .index-single .pagination .half {
+        width: 100%;
+    }
+    .index-home .grid figure.big, .index-category .grid figure.big {
+        width: 100%;
+    }
+    .index-home .grid figure.small, .index-category .grid figure.small {
+        width: 100%;
+    }
+    .article-footer .social > a {
+        line-height: normal;
+    }
+    .intro-effect-smooth .title h1{
+        font-size: 40px !important;
+        line-height: 46px !important; 
+    }
+    .title h1,
+    .index-gallery .title h1,
+    .index-single .title h1,
+    .intro-effect-grid .title h1,
+    .intro-effect-sidefixed .title h1 {
+        font-size: 30px !important;
+        line-height: 36px !important;
+    }
+    .title, .content {
+        font-size: 70%;
+    }
+    .content-holder a {
+        font-size: 80%;
+    }
+    .intro-effect-side .title {
+        width: 100%;
+        padding: 0 16px;
+        -webkit-transform: translateY(-50%);
+        -o-transform: translateY(-50%);
+        -moz-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+    }
+    .intro-effect-side.modify .bg-img::before {
+        -webkit-transform: translateX(-100%);
+        -o-transform: translateX(-100%);
+        -moz-transform: translateX(-100%);
+        -ms-transform: translateX(-100%);
+        transform: translateX(-100%);
+    }
+    .intro-effect-side .bg-img::after {
+        border-left-width: 0px;
+        border-right-width: 0px;
+        right: 0px;
+        left: 0px;
+        background: rgba(255,255,255,0.1);
+    }
+    .intro-effect-side.modify .bg-img::after {
+        background: rgba(255,255,255,0.8);
+    }
+    .intro-effect-sidefixed .content {
+        width: 100%;
+        margin-left: auto;
+    }
+    .intro-effect-sidefixed .bg-img::after {
+        width: 95%;
+    }
+    /* Make table responsive */
+    table,
+    thead,
+    tbody,
+    th,
+    td,
+    tr {
+        display: block;
+    }
+    thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+    tr { 
+        border: 1px solid #ccc; 
+    }
+    td {
+        border: none;
+        border-bottom: 1px solid #eee;
+        position: relative;
+        padding-left: 50%;
+        white-space: normal;
+        text-align:left;
+    }
+    td:before {
+        position: absolute;
+        left: 6px;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap;
+        text-align:left;
+        font-weight: bold;
+    }
+    td:before { 
+        content: attr(data-title); 
+    }
+    html, body {
+        height: 100%;
+    }
+    div#header {
+        height:100px;
+        position:fixed;
+    }
+    #bg-image,#bg-pattern{
+        top:100px;
+        position: fixed;
+    }   
+    #countdown-widget {
+        position: fixed;
+    }
+    #tubular-container,#tubular-shield,#bg-overlay,#bg-loading {
+        visibility: visible;
+    }
+    #content {
+        margin-top: 100px;
+    }
+    #main div.section.countdown {
+        margin-top: 80px;
+        cursor: pointer;
+    }   
+    div.section.countdown .scrolldown {
+        display:block;
+    }
+    .countdown_amount {
+        font-size: 80px;
+        line-height: 80px;  
+    }
+    h1.title {
+        font-size: 55px;
+        line-height: 80px;
+        text-align: center;
+        letter-spacing: 0;
+    }
+    p.description {
+        text-align: center;
+    }
+    #widgets{
+        padding-top: 30px;
+    }
+    #widgets.opened > span.close {
+        top:100px;
+    }
+    #main #widgets div.section {
+        margin:0 auto 30px auto;
+        opacity: 0;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+        filter: alpha(opacity=0);
+    }       
+    div.section.newsletter fieldset {
+        border: 1px solid;
+        padding: 0 50px 50px 50px;
+    }   
+    div.section.newsletter legend {
+        padding: 0px 30px;
+        text-align: center;             
+        font-size: 30px;
+        line-height: 45px;  
+        width: auto;
+    }
+    div.section.newsletter input.text {
+         width:82%;   
+    }
+    div.section.newsletter input.submit {
+         width:88px;   
+    }
+    div.section.social > .twitter{
+        width:51%;   
+        padding-left:90px; 
+        padding-top:0;
+        background-position: 0 0; 
+        float:left;
+    }
+    div.section.social > .findus {
+        width: 30%;
+        float:right;   
+    }
+    div.section.social .findus a.social {
+        float:right;
+    }
+    div.section.writeus {
+        position: fixed!important;;
+        margin: 0!important;
+    }
+    #contact_form .wrap{
+        width: 668px;
+    }
+    #contact_form .wrap .form{
+        width:485px;
+    }
+    /* Add new rules for this interval below */
+
+}
+
+
+/*--- 6. Responsive Min_768px ---*/
+@media only screen and (min-width: 768px) {
+    table > thead > tr > th, 
+    table > tbody > tr > th, 
+    table > tfoot > tr > th, 
+    table > thead > tr > td, 
+    table > tbody > tr > td, 
+    table > tfoot > tr > td {
+        padding: 6px;
+    }
+    .cd-top {
+        right: 20px;
+        bottom: 20px;
+    }
+
+    /* Add new rules for this interval below */
+
+}
+
+
+
+/*--- 7. Responsive Max_960px ---*/
+@media screen and (max-width: 960px) {
+    .tabs nav a.icon span {
+        display: none;
+    }
+    .tabs nav a:before {
+        margin-right: 0;
+    }
+    .grid li {
+        width: 33.3%;
+    }
+    .slideshow li {
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        margin: 0;
+    }
+    .slideshow li figure img {
+        width: auto;
+        margin: 0 auto;
+        max-width: 100%;
+    }
+    .slideshow nav span,
+    .slideshow nav span.nav-close {
+        font-size: 28px;
+        padding: 4px;
+    }
+    .info-keys {
+        display: none;
+    }
+    nav.gallery-nav > div > ul {
+        display: none;
+    }
+    /* Add new rules for this interval below */
+
+}
+
+
+/*--- 8. Responsive Max_1024px ---*/
+@media only screen and (max-width: 1024px) {
+    .index-home .grid figure.big, .index-category .grid figure.big {
+        width: 100%;
+    }
+    .index-home .grid figure.small, .index-category .grid figure.small {
+        width: 50%;
+    }
+    /* Add new rules for this interval below */
+
+}
+
+
+/*--- 9. Responsive Min_1024px ---*/
+@media only screen and (min-width: 1024px) {
+    .cd-top {
+        height: 60px;
+        width: 60px;
+        right: 30px;
+        bottom: 30px;
+    }
+    /* Add new rules for this interval below */
+
+}
+
+
+/*--- 10. Responsive Min_1367px ---*/
+@media only screen and (min-width: 1367px) {
+    .modify .header{
+        height: 60%;
+    }
+    /* Add new rules for this interval below */
+
+}
+
+
+/*--- 11. Responsive Min_768px and Max_1023px ---*/
+@media only screen and (min-width: 768px) and (min-width: 1023px){
+    .index-category .intro-effect-sidefixed.modify .title h1 {
+        font-size: 42px;
+        line-height: 46px !important;
+        transition: all 900ms;
+        -o-transition: all 900ms;
+        -moz-transition: all 900ms;
+        -ms-transition: all 900ms;
+        -webkit-transition: all 900ms;
+    }
+    .index-category .intro-effect-sidefixed .title h1 {
+        transition: all 700ms;
+        -o-transition: all 700ms;
+        -moz-transition: all 700ms;
+        -ms-transition: all 700ms;
+        -webkit-transition: all 700ms;
+    }
+    /* Add new rules for this interval below */
+
+}
+
+
+/*--- 12. Responsive Max_600px ---*/
+@media only screen and (max-width: 600px) {
+    .travelogue-more-info h2 {
+        width: 70%;
+    }
+    a.travelogue-close-info, 
+    a.travelogue-close-info{
+        position: inherit;
+    }
+    a.travelogue-close-info:hover, 
+    a.travelogue-close-info:hover{
+        opacity: 0.85;
+    }
+    /* Add new rules for this interval below */
+
+}
+
+
+/*--- 13. Responsive Min_600px ---*/
+@media only screen and (min-width: 600px) {
+    .travelogue-close-info {
+        display: none;
+    }
+    .travelogue-single-point .travelogue-more-info {
+        position: absolute;
+        width: 220px;
+        height: auto;
+        padding: 15px;
+        overflow-y: visible;
+        line-height: 1.4;
+        border-radius: 3px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+        -o-box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+        -moz-box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+        -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    }
+    .travelogue-single-point .travelogue-more-info::before {
+        display: block;
+    }
+    .travelogue-single-point .travelogue-more-info.travelogue-left, .travelogue-single-point .travelogue-more-info.travelogue-right {
+        top: 50%;
+        bottom: auto;
+        -webkit-transform: translateY(-50%);
+        -moz-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        -o-transform: translateY(-50%);
+        transform: translateY(-50%);
+    }
+    .travelogue-single-point .travelogue-more-info.travelogue-left::before, .travelogue-single-point .travelogue-more-info.travelogue-right::before {
+        top: 50%;
+        bottom: auto;
+        -webkit-transform: translateY(-50%);
+        -moz-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        -o-transform: translateY(-50%);
+        transform: translateY(-50%);
+    }
+    .travelogue-single-point .travelogue-more-info.travelogue-left {
+        right: 160%;
+        left: auto;
+    }
+    .travelogue-single-point .travelogue-more-info.travelogue-left::before {
+        border-left-color: rgba(39, 38, 43, 0.8);
+        left: 100%;
+    }
+    .travelogue-single-point .travelogue-more-info.travelogue-right {
+        left: 160%;
+    }
+    .travelogue-single-point .travelogue-more-info.travelogue-right::before {
+        border-right-color: rgba(39, 38, 43, 0.8);
+        right: 100%;
+    }
+    .travelogue-single-point .travelogue-more-info.travelogue-top, .travelogue-single-point .travelogue-more-info.travelogue-bottom {
+        left: 50%;
+        right: auto;
+        -webkit-transform: translateX(-50%);
+        -moz-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        -o-transform: translateX(-50%);
+        transform: translateX(-50%);
+    }
+    .travelogue-single-point .travelogue-more-info.travelogue-top::before, .travelogue-single-point .travelogue-more-info.travelogue-bottom::before {
+        left: 50%;
+        right: auto;
+        -webkit-transform: translateX(-50%);
+        -moz-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        -o-transform: translateX(-50%);
+        transform: translateX(-50%);
+    }
+    .travelogue-single-point .travelogue-more-info.travelogue-top {
+        bottom: 160%;
+        top: auto;
+    }
+    .travelogue-single-point .travelogue-more-info.travelogue-top::before {
+        border-top-color: rgba(39, 38, 43, 0.8);
+        top: 100%;
+    }
+    .travelogue-single-point .travelogue-more-info.travelogue-bottom {
+        top: 160%;
+    }
+    .travelogue-single-point .travelogue-more-info.travelogue-bottom::before {
+        border-bottom-color: rgba(39, 38, 43, 0.8);
+        bottom: 100%;
+    }
+    .travelogue-single-point .travelogue-more-info h2 {
+        line-height: 30px;
+        margin-bottom: 0;
+    }
+    .travelogue-single-point .travelogue-more-info p {
+        font-size: 14px;
+        line-height: 20px;
+        margin-bottom: 13px;
+    }
+    .travelogue-single-point.is-open .travelogue-more-info.travelogue-left {
+        right: 140%;
+    }
+    .travelogue-single-point.is-open .travelogue-more-info.travelogue-right {
+        left: 140%;
+    }
+    .travelogue-single-point.is-open .travelogue-more-info.travelogue-top {
+        bottom: 140%;
+    }
+    .travelogue-single-point.is-open .travelogue-more-info.travelogue-bottom {
+        top: 140%;
+    }
+    /* Add new rules for this interval below */
+
+}
+
+@media only screen and (min-width: 1366px) {
+    .bg-img img{
+        max-width: 100%;
+    }
+}
