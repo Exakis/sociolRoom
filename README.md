@@ -1,5 +1,6 @@
 # SociolRoom Analytics
-Sociol Room is a webiste displaing in a wall the cognitive analysis result of pictures posted in Twitter and Instagram with a specific hashtag.
+Sociol Room is a webiste displaying in a wall the cognitive analysis results of pictures posted in Twitter and Instagram with a specific hashtag.
+You can have a demo: http://sociolroom-analytics.azurewebsites.net
 
 #Before starting
 The website is designed to run on Microsoft Azure.
