@@ -9,7 +9,7 @@ The steps to run the app are:
 ##Azure provisionning
 * Open an Azure account
 * Create cognitive service for Vision, Emotion, Face https://www.microsoft.com/cognitive-services/en-us/apis
-* Creat an Bing Translator app https://www.microsoft.com/en-us/translator/getstarted.aspx
+* Create an Bing Translator app https://www.microsoft.com/en-us/translator/getstarted.aspx
 * Create a Document DB database
 * Create an Azure service bus
 * Create a storage
@@ -19,7 +19,7 @@ The steps to run the app are:
 
 ##Configuration
 * Clone the repository
-* Create on the root folder a .config with 2 files secretAppSettings.config and secretConnectionStrings.config
+* Create a folder named .config on the root folder with 2 files: secretAppSettings.config and secretConnectionStrings.config
 * Replace with your keys
 * 
 secretAppSettings.config
